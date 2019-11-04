@@ -1,0 +1,134 @@
+.wrap-kroll {
+
+  & .section-inner-page {
+    position: relative;
+    padding-top: 110px;
+    padding-bottom: 160px;
+    background: linear-gradient(270deg, #904E95 0%, #E96443 100%);
+
+    &__title {
+      color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      max-width: 1080px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__text {
+      max-width: 763px;;
+      font-size: 17px;
+      line-height: 26px;
+      color: #fff;
+    }
+    &__layout {
+      margin-top: 45px;
+      margin-bottom: 58px;
+      padding-left: 105px;
+      box-sizing: border-box;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-img {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 980px;
+        width: 100%;
+        &:before {
+          content: '';
+          position: absolute;
+          top: -18px;
+          right: -20px;
+          width: 100%;
+          height: 100%;
+          border: 2px solid #fff;
+          box-sizing: border-box;
+          border-radius: 5px;
+          z-index: 0;
+        }
+        & img {
+          position: relative;
+          max-width: 100%;
+          max-height: 100%;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+          z-index: 1;
+        }
+      }
+    }
+
+    &__deckor {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 0;
+    }
+
+    &__circle {
+
+      &-purple {
+        position: absolute;
+        left: 47px;
+        top: 398px;
+        width: 490px;
+        height: 503px;
+        background: center no-repeat url('../img/section-inner-page/circle-purple.svg');
+      }
+
+      &-yellow {
+        position: absolute;
+        left: 364px;
+        top: 667px;
+        width: 288px;
+        height: 288px;
+        background: center no-repeat url('../img/section-inner-page/circle-yellow.svg');
+      }
+
+      &-blue {
+        position: absolute;
+        left: auto;
+        right: 85px;
+        top: 1735px;
+        width: 454px;
+        height: 454px;
+        background: center no-repeat url('../img/section-inner-page/circle-blue.svg');
+      }
+
+      &-light-blue{
+        position: absolute;
+        left: auto;
+        right: 200px;
+        bottom: 145px;
+        width: 352px;
+        height: 352px;
+        background: center no-repeat url('../img/section-inner-page/circle-light-blue.svg');
+      }
+    }
+
+    &__triangle {
+      &-red {
+        position: absolute;
+        left: auto;
+        right: 0;
+        top: 2962px;
+        width: 337px;
+        height: 430px;
+        background: center no-repeat url('../img/section-inner-page/triangle-red.svg');
+      }
+
+      &-yellow {
+        position: absolute;
+        left: 0;
+        top: 4000px;
+        width: 495px;
+        height: 547px;
+        background: center no-repeat url('../img/section-inner-page/triangle-yellow.svg');
+      }
+    }
+  }
+}

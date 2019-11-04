@@ -1,0 +1,59 @@
+.wrap-kroll {
+  & .footer {
+    padding-top: 115px;
+    padding-bottom: 78px;
+    background: linear-gradient(90deg, rgba(144, 78, 149, 0.3) 0%, rgba(144, 78, 149, 0) 100%), url('../img/footer/bg.png'), #4D6AA7;
+
+    &__content {
+      max-width: 946px;
+      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 51px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 75px;
+    }
+
+    &__link {
+      @include font-monserat;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 35px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+      padding: 5px;
+      border-bottom: 1px solid #fff;
+    }
+
+    &__logo {
+      margin-top: 190px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      & img {
+        width: 205px;
+        height: 44px;
+      }
+    }
+
+    &__year {
+      margin-left: 4px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+}
