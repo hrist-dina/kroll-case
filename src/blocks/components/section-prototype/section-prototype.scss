@@ -1,0 +1,30 @@
+.wrap-kroll {
+  & .section-prototype {
+    background: #F4F5F6;
+
+    &__content {
+      max-width: 910px;
+      margin: 0 auto;
+      padding-top: 85px;
+    }
+
+    &__text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 55px;
+      color: #000000;
+
+      & > span {
+        color: #939393;
+      }
+    }
+
+    &__layout {
+      width: 100%;
+      min-height: 2272px;
+      background: center no-repeat url("../img/section-prototype/layout.png");
+      background-size: cover;
+    }
+  }
+}

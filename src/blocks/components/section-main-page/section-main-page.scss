@@ -1,0 +1,134 @@
+.wrap-kroll {
+
+  & .section-main-page {
+    overflow: hidden;
+    padding-top: 90px;
+    padding-bottom: 230px;
+    background: linear-gradient(180deg, rgba(127, 127, 213, 0.5) 0%, rgba(134, 168, 231, 0.5) 53.04%, rgba(145, 234, 228, 0.5) 100%);
+
+    &__title {
+      color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__content{
+      position: relative;
+      max-width: 1540px;
+      width: 100%;
+      margin: 0 8% 0 12%;
+    }
+
+    &__massage {
+      position: absolute;
+      width: 100%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, #E96443 -7.65%, #904E95 100%);
+      }
+
+      &.screen-1 {
+        top: 326px;
+      }
+
+      &.screen-2 {
+        top: 700px;
+      }
+
+      &.screen-3 {
+        top: 1330px;
+      }
+
+      &.screen-4 {
+        top: 2280px;
+      }
+
+      &.screen-5 {
+        top: 3254px;
+      }
+
+      & > p {
+        max-width: 452px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 26px;
+        color: #333333;
+        padding-bottom: 30px;
+        margin: 0;
+      }
+
+      &-box {
+        position: absolute;
+        max-width: 586px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    &__layout {
+      &-img {
+        position: relative;
+        text-align: right;
+        top: -20px;
+        right: 0;
+        z-index: 0;
+      }
+      &-box {
+      }
+    }
+
+    &__decor {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+    }
+
+    &__curcle {
+
+      &-yellow {
+        position: absolute;
+        top: 830px;
+        left: 280px;
+        width: 450px;
+        height: 450px;
+        background: center no-repeat url('../img/section-main-page/curcle-yellow.svg')
+      }
+
+      &-purple {
+        position: absolute;
+        top: 1595px;
+        right: -150px;
+        left: auto;
+        width: 377px;
+        height: 378px;
+        background: center no-repeat url('../img/section-main-page/curcle-purple.svg')
+      }
+
+      &-blue {
+        position: absolute;
+        bottom: -140px;
+        left: 280px;
+        width: 482px;
+        height: 482px;
+        background: center no-repeat url('../img/section-main-page/curcle-blue.svg')
+      }
+    }
+
+    &__triangle-gray {
+      position: absolute;
+      left: -25%;
+      top: 1870px;
+      width: 483px;
+      height: 321px;
+      background: center no-repeat url('../img/section-main-page/triangle-gray.svg')
+    }
+  }
+}
