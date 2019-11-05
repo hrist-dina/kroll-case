@@ -126,7 +126,7 @@ export const smartGrid = cb => {
 		filename: "_smart-grid",
 		columns: 12, // number of grid columns
 		offset: "30px", // gutter width
-		mobileFirst: true,
+		mobileFirst: false,
 		mixinNames: {
 			container: "container"
 		},
@@ -144,7 +144,7 @@ export const smartGrid = cb => {
 				width: "768px"
 			},
 			lg: {
-				width: "992px"
+				width: "1024px"
 			},
 			xl: {
 				width: "1200px"

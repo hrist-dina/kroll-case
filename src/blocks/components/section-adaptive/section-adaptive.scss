@@ -4,6 +4,20 @@
     padding-top: 110px;
     padding-bottom: 160px;
 
+    @include lg-block {
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+
+    @include md-block {
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    @include sm-block {
+      padding-bottom: 0;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -12,9 +26,13 @@
       height: 399px;
       background: #FBDC49;
       z-index: -1;
+      @include md-block {
+        height: 80%;
+      }
     }
 
     &__content {
+      @include content();
       max-width: 1180px;
       width: 100%;
       margin: 0 auto;
@@ -34,10 +52,9 @@
     &__mobile {
       max-width: 398px;
       width: 100%;
-      margin-right: 30px;
-
-      &:last-child {
-        margin-right: 0;
+      margin: 15px;
+      @include md-block {
+        margin: 10px;
       }
 
       & img {
@@ -50,6 +67,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include md-block {
+          margin-top: 48px;
+          flex-direction: column;
+        }
       }
     }
 

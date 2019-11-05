@@ -4,6 +4,7 @@
 
     &__title {
       color: #482C65;
+      margin-bottom: 12px;
     }
 
     &__logo {
@@ -26,6 +27,11 @@
       line-height: 31px;
       color: #333333;
       max-width: 460px;
+
+      @include sm-block {
+        font-size: 16px;
+        line-height: 26px;
+      }
     }
 
     &__letter {
@@ -48,12 +54,29 @@
         font-size: 680px;
         line-height: 898px;
         color: rgba(255, 255, 255, 0.4);
+        @include md-block {
+          font-size: 480px;
+          line-height: 698px;
+        }
+        @include sm-block {
+          font-size: 280px;
+          line-height: 498px;
+        }
       }
 
       &-m {
         position: absolute;
         top: -45%;
         left: 20%;
+        @include md-block {
+          top: -35%;
+          left: 2%;
+        }
+
+        @include sm-block {
+          top: -25%;
+          left: 2%;
+        }
       }
 
       &-k {
@@ -61,24 +84,48 @@
         top: -4%;
         right: 14%;
         left: auto;
+        @include md-block {
+          top: -6%;
+          right: 6%;
+        }
       }
 
       &-l {
         position: absolute;
         top: 35%;
         left: 14%;
+
+        @include sm-block {
+          top: 15%;
+          left: 2%;
+        }
       }
     }
 
     &__content {
+      @include content();
       padding-top: 122px;
       max-width: 1142px;
       margin: 0 auto;
+
+      @include sm-block {
+        padding-top: 50px;
+      }
     }
 
     &__inner {
       max-width: 805px;
       margin: 0 auto 57px;
+    }
+
+    &__laptop {
+      max-width: 1142px;
+      width: 100%;
+
+      & img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 }

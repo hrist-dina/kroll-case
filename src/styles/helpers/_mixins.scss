@@ -1,3 +1,8 @@
 @mixin font-monserat {
   font-family: 'Montserrat', sans-serif;
 }
+
+@mixin content {
+  padding: 0 15px;
+  box-sizing: border-box;
+}

@@ -1,25 +1,47 @@
 .wrap-kroll {
 
+  $break_medium: 1365px;
+  $break_hide_message: 580px;
+
   & .section-main-page {
     overflow: hidden;
     padding-top: 90px;
     padding-bottom: 230px;
     background: linear-gradient(180deg, rgba(127, 127, 213, 0.5) 0%, rgba(134, 168, 231, 0.5) 53.04%, rgba(145, 234, 228, 0.5) 100%);
 
+    @include to($break_medium) {
+      padding-bottom: 100px;
+    }
+
+    @include lg-block {
+      padding-top: 40px;
+    }
+
+    @include md-block {
+      padding-bottom: 30px;
+    }
+
     &__title {
       color: rgba(255, 255, 255, 0.1);
     }
 
     &__content{
+      @include content();
       position: relative;
       max-width: 1540px;
       width: 100%;
       margin: 0 8% 0 12%;
+
+      @include to(1750px) {
+        max-width: 1540px;
+        margin: 0 auto;
+      }
     }
 
     &__massage {
       position: absolute;
       width: 100%;
+      left: 15px;
 
       &:before {
         content: '';
@@ -32,27 +54,31 @@
       }
 
       &.screen-1 {
-        top: 326px;
+        top: 6%;
+
+        @include md-block {
+          top: 4%
+        }
       }
 
       &.screen-2 {
-        top: 700px;
+        top: 18%;
       }
 
       &.screen-3 {
-        top: 1330px;
+        top: 31%;
       }
 
       &.screen-4 {
-        top: 2280px;
+        top: 59%;
       }
 
       &.screen-5 {
-        top: 3254px;
+        top: 85%;
       }
 
       & > p {
-        max-width: 452px;
+        //max-width: 452px;
         font-style: normal;
         font-weight: normal;
         font-size: 17px;
@@ -60,15 +86,48 @@
         color: #333333;
         padding-bottom: 30px;
         margin: 0;
+        max-width: #{calc(100% - 138px)};
+
+        @include to(1500px) {
+          max-width: #{calc(100% - 100px)};
+        }
+
+        @include to($break_medium) {
+          font-size: 14px;
+          line-height: 20px;
+          padding-bottom: 20px;
+          max-width: #{calc(100% - 80px)};
+        }
+
+        @include md-block {
+          font-size: 12px;
+          line-height: 16px;
+          padding-bottom: 10px;
+          max-width: #{calc(100% - 40px)};
+        }
       }
 
       &-box {
         position: absolute;
-        max-width: 586px;
         width: 100%;
-        top: 0;
+        height: 100%;
+        top: -20px;
         left: 0;
         z-index: 1;
+        max-width: #{calc(100% - 950px)};
+        @include to($break_medium) {
+          max-width: #{calc(100% - 750px)};
+        }
+        @include lg-block {
+          max-width: #{calc(100% - 450px)}
+        }
+        @include md-block {
+          max-width: 50%
+        }
+
+        @include to($break_hide_message) {
+          display: none;
+        }
       }
     }
 
@@ -79,8 +138,36 @@
         top: -20px;
         right: 0;
         z-index: 0;
+
+        @include lg-block {
+          top: -10%;
+        }
+
+        & img {
+          max-width: 1000px;
+          width: 100%;
+          max-height: 100%;
+
+          @include to($break_medium) {
+            max-width: 800px;
+          }
+
+          @include lg-block {
+            max-width: 500px;
+          }
+
+          @include md-block {
+            max-width: 50%;
+          }
+          @include to($break_hide_message) {
+            margin-top: 20px;
+            top: 0;
+            max-width: 100%;
+          }
+        }
       }
       &-box {
+        position: relative;
       }
     }
 
@@ -88,10 +175,13 @@
       position: absolute;
       width: 100%;
       height: 100%;
+      @include lg-block {
+        display: none;
+      }
 
     }
 
-    &__curcle {
+    &__circle {
 
       &-yellow {
         position: absolute;
@@ -99,7 +189,7 @@
         left: 280px;
         width: 450px;
         height: 450px;
-        background: center no-repeat url('../img/section-main-page/curcle-yellow.svg')
+        background: center no-repeat url('../img/section-main-page/circle-yellow.svg')
       }
 
       &-purple {
@@ -109,7 +199,7 @@
         left: auto;
         width: 377px;
         height: 378px;
-        background: center no-repeat url('../img/section-main-page/curcle-purple.svg')
+        background: center no-repeat url('../img/section-main-page/circle-purple.svg')
       }
 
       &-blue {
@@ -118,7 +208,7 @@
         left: 280px;
         width: 482px;
         height: 482px;
-        background: center no-repeat url('../img/section-main-page/curcle-blue.svg')
+        background: center no-repeat url('../img/section-main-page/circle-blue.svg')
       }
     }
 

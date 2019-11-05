@@ -3,8 +3,15 @@
     padding-top: 115px;
     padding-bottom: 78px;
     background: linear-gradient(90deg, rgba(144, 78, 149, 0.3) 0%, rgba(144, 78, 149, 0) 100%), url('../img/footer/bg.png'), #4D6AA7;
+    background-size: cover;
+
+    @include lg-block {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
 
     &__content {
+      @include content();
       max-width: 946px;
       margin: 0 auto;
       width: 100%;
@@ -19,6 +26,12 @@
       text-align: center;
       color: #fff;
       margin-bottom: 75px;
+
+      @include lg-block {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+      }
     }
 
     &__link {
@@ -39,6 +52,10 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
+      @include lg-block {
+        margin-top: 90px;
+      }
+
 
       & img {
         width: 205px;

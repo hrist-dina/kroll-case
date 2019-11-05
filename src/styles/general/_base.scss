@@ -20,6 +20,10 @@
 		font-weight: bold;
 		font-size: 44px;
 		line-height: 59px;
+		@include sm-block {
+			font-size: 34px;
+			line-height: 42px;
+		}
 	}
 
 	& .h2 {
@@ -28,5 +32,13 @@
 		line-height: 98px;
 		text-transform: uppercase;
 		color: rgba(0, 0, 0, 0.1);
+		@include md-block {
+			font-size: 60px;
+			line-height: 68px;
+		}
+		@include md-block {
+			font-size: 36px;
+			line-height: 48px;
+		}
 	}
 }
